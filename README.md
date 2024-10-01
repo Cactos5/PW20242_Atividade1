@@ -1,2 +1,2 @@
-# PW20242_Atividade1
+# Eduardo de Almeida Souza
 Atividade prática avaliativa da disciplina de Programação para a Web.
