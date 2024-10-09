@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 {% set titulo = "Cadastro de Produto" %}
 {% block conteudo %}
-<h1>Cadastro de Produto</h1>
-<form action="post_contato" method="post">
+<form action="/post_cadastro" method="post">
     <div class="mb-3 form-floating">
         <input
             class="form-control"
@@ -13,6 +12,8 @@
         >
         <label class="form-label" for="nome">Nome Completo</label>
     </div>
+
+
     <div class="mb-3 form-floating">
     <input
         class="form-control"
@@ -23,6 +24,8 @@
     >
     <label class="form-label" for="estoque">Estoque</label>
 </div>
+
+
 <div class="mb-3 form-floating">
 <input
     class="form-control"
@@ -31,8 +34,12 @@
     id="preco"
     placeholder=" "
 >
-</div>
 <label class="form-label" for="preco">Preço</label>
+</div>
+
+
+
+
 <div class="mb-3 form-floating">
     <textarea
         class="form-control"
@@ -41,7 +48,28 @@
         placeholder=" "
         style="height: 90px"
     ></textarea>
-    <label class="form-label" for="decricao">Descrição</label>
+    <label class="form-label" for="descricao">Descrição</label>
+</div>
+<div class="mb-3 form-floating">
+    <select
+        class="form-control"
+        name="categoria"
+        id="categoria"
+        aria-label="Selecione uma Categoria"
+    >
+        <!-- <option value="" selected disabled>Selecione uma Categoria</option> -->
+        <option value="alimentos">Alimentos</option>
+        <option value="limpeza">Limpeza</option>
+        <option value="eletronicos">Eletrônicos</option>
+        <option value="brinquedos">Brinquedos</option>
+        <option value="vestuario">Vestuário</option>
+        <option value="automotivo">Automotivo</option>
+        <option value="esporte_lazer">Esporte & Lazer</option>
+    </select>
+    <label class="form-label" for="categoria">Categoria</label>
+</div>
+<div class="mb-3">
+    <button class="btn btn-dark btn-lg" type="submit">Cadastrar</button>
 </div>
 </form>
 {% endblock %}
